@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>CucumberJava</td>
+                          <td>1</td>
+                        <td>05 Jun 2021, 12:35</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">StepDefinition.DETFilter.count_length_for_pdc_filter()</td>
+                <td>1</td>
+                <td class="duration" data-value="13072000">013ms</td>
+                <td class="duration" data-value="13072000">013ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.DETFilter.pdc_counts_and_select_all_the_filters()</td>
+                <td>1</td>
+                <td class="duration" data-value="60177032000">1m 177ms</td>
+                <td class="duration" data-value="60177032000">1m 177ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.DETFilter.user_verify_pdc_tab_is_present()</td>
+                <td>1</td>
+                <td class="duration" data-value="27583000">027ms</td>
+                <td class="duration" data-value="27583000">027ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.DTC.count_length_for_pdc_filter()</td>
+                <td>1</td>
+                <td class="duration" data-value="15224000">015ms</td>
+                <td class="duration" data-value="15224000">015ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.DTC.pdc_counts_and_select_all_the_filters()</td>
+                <td>1</td>
+                <td class="duration" data-value="60193920000">1m 193ms</td>
+                <td class="duration" data-value="60193920000">1m 193ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.DTC.user_verify_pdc_tab_is_present()</td>
+                <td>1</td>
+                <td class="duration" data-value="33490000">033ms</td>
+                <td class="duration" data-value="33490000">033ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Docindexval.assert_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="1469000">001ms</td>
+                <td class="duration" data-value="1469000">001ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Docindexval.document_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="5080499000">5s 080ms</td>
+                <td class="duration" data-value="5080499000">5s 080ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Docindexval.set_index_val()</td>
+                <td>1</td>
+                <td class="duration" data-value="7226301000">7s 226ms</td>
+                <td class="duration" data-value="7226301000">7s 226ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Docindexval1.assert_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="76000">000ms</td>
+                <td class="duration" data-value="76000">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Docindexval1.document_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="5073441000">5s 073ms</td>
+                <td class="duration" data-value="5073441000">5s 073ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Docindexval1.removedocindexval()</td>
+                <td>1</td>
+                <td class="duration" data-value="2803669000">2s 803ms</td>
+                <td class="duration" data-value="2803669000">2s 803ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Docindexval1.set_index_val()</td>
+                <td>1</td>
+                <td class="duration" data-value="7117764000">7s 117ms</td>
+                <td class="duration" data-value="7117764000">7s 117ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Docindexval2.assert_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="162000">000ms</td>
+                <td class="duration" data-value="162000">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Docindexval2.document_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="5069003000">5s 069ms</td>
+                <td class="duration" data-value="5069003000">5s 069ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Docindexval2.removedocindexval()</td>
+                <td>1</td>
+                <td class="duration" data-value="2656788000">2s 656ms</td>
+                <td class="duration" data-value="2656788000">2s 656ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Docindexval2.set_index_val()</td>
+                <td>1</td>
+                <td class="duration" data-value="7119088000">7s 119ms</td>
+                <td class="duration" data-value="7119088000">7s 119ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Docinndexval3.assert_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="261000">000ms</td>
+                <td class="duration" data-value="261000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Docinndexval3.document_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="5070860000">5s 070ms</td>
+                <td class="duration" data-value="5070860000">5s 070ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Docinndexval3.removedocindexval()</td>
+                <td>1</td>
+                <td class="duration" data-value="2656609000">2s 656ms</td>
+                <td class="duration" data-value="2656609000">2s 656ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Docinndexval3.set_index_val()</td>
+                <td>1</td>
+                <td class="duration" data-value="7087765000">7s 087ms</td>
+                <td class="duration" data-value="7087765000">7s 087ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Fileindexval.assert_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="274000">000ms</td>
+                <td class="duration" data-value="274000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Fileindexval.document_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="5086716000">5s 086ms</td>
+                <td class="duration" data-value="5086716000">5s 086ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Fileindexval.removedocindexval()</td>
+                <td>1</td>
+                <td class="duration" data-value="2019201000">2s 019ms</td>
+                <td class="duration" data-value="2019201000">2s 019ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Fileindexval.set_index_val()</td>
+                <td>1</td>
+                <td class="duration" data-value="7131363000">7s 131ms</td>
+                <td class="duration" data-value="7131363000">7s 131ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Fileindexval1.assert_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="82000">000ms</td>
+                <td class="duration" data-value="82000">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Fileindexval1.document_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="5082803000">5s 082ms</td>
+                <td class="duration" data-value="5082803000">5s 082ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Fileindexval1.removedocindexval()</td>
+                <td>1</td>
+                <td class="duration" data-value="2467924000">2s 467ms</td>
+                <td class="duration" data-value="2467924000">2s 467ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Fileindexval1.set_index_val()</td>
+                <td>1</td>
+                <td class="duration" data-value="7108964000">7s 108ms</td>
+                <td class="duration" data-value="7108964000">7s 108ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Fileindexval2.assert_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="95000">000ms</td>
+                <td class="duration" data-value="95000">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Fileindexval2.document_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="5081609000">5s 081ms</td>
+                <td class="duration" data-value="5081609000">5s 081ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Fileindexval2.removedocindexval()</td>
+                <td>1</td>
+                <td class="duration" data-value="5806086000">5s 806ms</td>
+                <td class="duration" data-value="5806086000">5s 806ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Fileindexval2.set_index_val()</td>
+                <td>1</td>
+                <td class="duration" data-value="7077466000">7s 077ms</td>
+                <td class="duration" data-value="7077466000">7s 077ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.GoogleSearchSteps.browser_is_open()</td>
+                <td>1</td>
+                <td class="duration" data-value="1922588000">1s 922ms</td>
+                <td class="duration" data-value="1922588000">1s 922ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.Hooks.afterMethod(io.cucumber.java.Scenario)</td>
+                <td>23</td>
+                <td class="duration" data-value="217671382000">3m 37s 671ms</td>
+                <td class="duration" data-value="9463973130">9s 463ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.IndexVal.count_length_for_pdc_filter()</td>
+                <td>1</td>
+                <td class="duration" data-value="79770000">079ms</td>
+                <td class="duration" data-value="79770000">079ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.IndexVal.pdc_counts_and_select_all_the_filters()</td>
+                <td>1</td>
+                <td class="duration" data-value="5256330000">5s 256ms</td>
+                <td class="duration" data-value="5256330000">5s 256ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.IndexVal.user_verify_pdc_tab_is_present()</td>
+                <td>1</td>
+                <td class="duration" data-value="3071998000">3s 071ms</td>
+                <td class="duration" data-value="3071998000">3s 071ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.IndexVal1.count_length_for_pdc_filter()</td>
+                <td>1</td>
+                <td class="duration" data-value="249457000">249ms</td>
+                <td class="duration" data-value="249457000">249ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.IndexVal1.pdc_counts_and_select_all_the_filters()</td>
+                <td>1</td>
+                <td class="duration" data-value="9206479000">9s 206ms</td>
+                <td class="duration" data-value="9206479000">9s 206ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.IndexVal1.removeindex()</td>
+                <td>1</td>
+                <td class="duration" data-value="159164000">159ms</td>
+                <td class="duration" data-value="159164000">159ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.IndexVal1.user_verify_pdc_tab_is_present()</td>
+                <td>1</td>
+                <td class="duration" data-value="3074048000">3s 074ms</td>
+                <td class="duration" data-value="3074048000">3s 074ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.IndexVal2.count_length_for_pdc_filter()</td>
+                <td>1</td>
+                <td class="duration" data-value="421232000">421ms</td>
+                <td class="duration" data-value="421232000">421ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.IndexVal2.pdc_counts_and_select_all_the_filters()</td>
+                <td>1</td>
+                <td class="duration" data-value="9154011000">9s 154ms</td>
+                <td class="duration" data-value="9154011000">9s 154ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.IndexVal2.removeindex()</td>
+                <td>1</td>
+                <td class="duration" data-value="244956000">244ms</td>
+                <td class="duration" data-value="244956000">244ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.IndexVal2.user_verify_pdc_tab_is_present()</td>
+                <td>1</td>
+                <td class="duration" data-value="3070544000">3s 070ms</td>
+                <td class="duration" data-value="3070544000">3s 070ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.LocationFilter.count_length_for_location_filter()</td>
+                <td>1</td>
+                <td class="duration" data-value="16113000">016ms</td>
+                <td class="duration" data-value="16113000">016ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.LocationFilter.user_counts_and_select_all_the_filters()</td>
+                <td>1</td>
+                <td class="duration" data-value="727414000">727ms</td>
+                <td class="duration" data-value="727414000">727ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.LocationFilter.user_verify_location_tab_is_present()</td>
+                <td>1</td>
+                <td class="duration" data-value="37578000">037ms</td>
+                <td class="duration" data-value="37578000">037ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.LoginSteps.hits_enter()</td>
+                <td>1</td>
+                <td class="duration" data-value="47803000">047ms</td>
+                <td class="duration" data-value="47803000">047ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.LoginSteps.user_ennter_text_in_goolge_search_box()</td>
+                <td>1</td>
+                <td class="duration" data-value="6609774000">6s 609ms</td>
+                <td class="duration" data-value="6609774000">6s 609ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.LoginSteps.user_is_navigated_to_search_based_result()</td>
+                <td>1</td>
+                <td class="duration" data-value="17003000">017ms</td>
+                <td class="duration" data-value="17003000">017ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.LoginSteps.user_is_on_google_search()</td>
+                <td>1</td>
+                <td class="duration" data-value="70035870000">1m 10s 035ms</td>
+                <td class="duration" data-value="70035870000">1m 10s 035ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.NaviagtetoDashboard.click_on_datastore()</td>
+                <td>1</td>
+                <td class="duration" data-value="6447341000">6s 447ms</td>
+                <td class="duration" data-value="6447341000">6s 447ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.NaviagtetoDashboard.click_on_panel_list()</td>
+                <td>1</td>
+                <td class="duration" data-value="139019000">139ms</td>
+                <td class="duration" data-value="139019000">139ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.NaviagtetoDashboard.select_datastore()</td>
+                <td>1</td>
+                <td class="duration" data-value="2344214000">2s 344ms</td>
+                <td class="duration" data-value="2344214000">2s 344ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.NaviagtetoDashboard.user_clicks_on_dasboard_filter()</td>
+                <td>1</td>
+                <td class="duration" data-value="3049113000">3s 049ms</td>
+                <td class="duration" data-value="3049113000">3s 049ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.OwnerFilter.count_length_for_owner_filter()</td>
+                <td>1</td>
+                <td class="duration" data-value="12967000">012ms</td>
+                <td class="duration" data-value="12967000">012ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.OwnerFilter.owner_counts_and_select_all_the_filters()</td>
+                <td>1</td>
+                <td class="duration" data-value="3275880000">3s 275ms</td>
+                <td class="duration" data-value="3275880000">3s 275ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.OwnerFilter.user_verify_ownner_tab_is_present()</td>
+                <td>1</td>
+                <td class="duration" data-value="30131000">030ms</td>
+                <td class="duration" data-value="30131000">030ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.PDCFilter.count_length_for_pdc_filter()</td>
+                <td>1</td>
+                <td class="duration" data-value="16465000">016ms</td>
+                <td class="duration" data-value="16465000">016ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.PDCFilter.pdc_counts_and_select_all_the_filters()</td>
+                <td>1</td>
+                <td class="duration" data-value="81945331000">1m 21s 945ms</td>
+                <td class="duration" data-value="81945331000">1m 21s 945ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.PDCFilter.user_verify_pdc_tab_is_present()</td>
+                <td>1</td>
+                <td class="duration" data-value="26013000">026ms</td>
+                <td class="duration" data-value="26013000">026ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.contentprofile.count_length_for_pdc_filter()</td>
+                <td>1</td>
+                <td class="duration" data-value="13752000">013ms</td>
+                <td class="duration" data-value="13752000">013ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.contentprofile.pdc_counts_and_select_all_the_filters()</td>
+                <td>1</td>
+                <td class="duration" data-value="60155092000">1m 155ms</td>
+                <td class="duration" data-value="60155092000">1m 155ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.contentprofile.user_verify_pdc_tab_is_present()</td>
+                <td>1</td>
+                <td class="duration" data-value="26795000">026ms</td>
+                <td class="duration" data-value="26795000">026ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.dataelementindexval.assert_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="72000">000ms</td>
+                <td class="duration" data-value="72000">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.dataelementindexval.document_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="5005205000">5s 005ms</td>
+                <td class="duration" data-value="5005205000">5s 005ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.dataelementindexval.removedocindexval()</td>
+                <td>1</td>
+                <td class="duration" data-value="2017290000">2s 017ms</td>
+                <td class="duration" data-value="2017290000">2s 017ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.dataelementindexval.set_index_val()</td>
+                <td>1</td>
+                <td class="duration" data-value="7105701000">7s 105ms</td>
+                <td class="duration" data-value="7105701000">7s 105ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.dataelementinndexval1.assert_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="70000">000ms</td>
+                <td class="duration" data-value="70000">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.dataelementinndexval1.document_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="5000586000">5s</td>
+                <td class="duration" data-value="5000586000">5s</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.dataelementinndexval1.removedocindexval()</td>
+                <td>1</td>
+                <td class="duration" data-value="2251817000">2s 251ms</td>
+                <td class="duration" data-value="2251817000">2s 251ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.dataelementinndexval1.set_index_val()</td>
+                <td>1</td>
+                <td class="duration" data-value="7094279000">7s 094ms</td>
+                <td class="duration" data-value="7094279000">7s 094ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.datastoreindexval.assert_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="265000">000ms</td>
+                <td class="duration" data-value="265000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.datastoreindexval.document_index_value()</td>
+                <td>1</td>
+                <td class="duration" data-value="5091026000">5s 091ms</td>
+                <td class="duration" data-value="5091026000">5s 091ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.datastoreindexval.removedocindexval()</td>
+                <td>1</td>
+                <td class="duration" data-value="2020683000">2s 020ms</td>
+                <td class="duration" data-value="2020683000">2s 020ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.datastoreindexval.set_index_val()</td>
+                <td>1</td>
+                <td class="duration" data-value="7126970000">7s 126ms</td>
+                <td class="duration" data-value="7126970000">7s 126ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.fileformatfilter.count_length_for_pdc_filter()</td>
+                <td>1</td>
+                <td class="duration" data-value="16497000">016ms</td>
+                <td class="duration" data-value="16497000">016ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.fileformatfilter.pdc_counts_and_select_all_the_filters()</td>
+                <td>1</td>
+                <td class="duration" data-value="60164664000">1m 164ms</td>
+                <td class="duration" data-value="60164664000">1m 164ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.fileformatfilter.user_verify_pdc_tab_is_present()</td>
+                <td>1</td>
+                <td class="duration" data-value="27653000">027ms</td>
+                <td class="duration" data-value="27653000">027ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.folderpathfilter.count_length_for_pdc_filter()</td>
+                <td>1</td>
+                <td class="duration" data-value="12984000">012ms</td>
+                <td class="duration" data-value="12984000">012ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.folderpathfilter.pdc_counts_and_select_all_the_filters()</td>
+                <td>1</td>
+                <td class="duration" data-value="13955331000">13s 955ms</td>
+                <td class="duration" data-value="13955331000">13s 955ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinition.folderpathfilter.user_verify_pdc_tab_is_present()</td>
+                <td>1</td>
+                <td class="duration" data-value="28637000">028ms</td>
+                <td class="duration" data-value="28637000">028ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>84</td>
+              <td>106</td>
+              <td class="duration">13m 49s 762ms</td>
+              <td class="duration">7s 827ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
